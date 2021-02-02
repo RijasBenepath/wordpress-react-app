@@ -1,0 +1,35 @@
+#footer {
+    background-color: $light-gray;
+    a {
+        color: $primary;
+    }
+    .backtotop {
+        @include mdmax {
+            display: block;
+        }
+    }
+
+    .copyright {
+        text-align: left;
+        @include mdmax {
+            text-align: center;
+        }
+    }
+    .social { 
+        text-align: right;
+        @include mdmax {
+            text-align: center;
+        }
+        .social-icons {
+            margin: 5px;
+            svg {
+                fill: $gray;
+                width: 25px;
+                height: 25px;
+            }
+            &:hover svg {
+                fill: $primary; 
+            }
+        }
+    }
+  }

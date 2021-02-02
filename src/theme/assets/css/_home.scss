@@ -1,0 +1,196 @@
+.page {
+    main {
+     box-sizing: border-box;
+        &.home {
+            #heroCarousel {
+                max-width: 100vw;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                color: #FFF;
+            .container {
+                height: 100vh;
+                position: relative;
+            }
+            .carousel-item {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                min-height: 100vh;
+                
+                @include mdmax {
+                    &::before {
+                        content: " ";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background: rgb(0,0,0);
+                        background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(14,14,14,0) 70%);
+                    }
+                }
+            }
+                h1 {
+                    font-weight: 700;
+                    color: $light;
+                   
+                }
+                img, svg {
+                    width: 100%;
+                    height: 100vh;
+                }
+                .carousel-caption {
+                bottom: 10%;
+                left: 15px; 
+                    @include mdmax {
+                        padding-top: 50vh;
+                        position: relative;
+                        bottom: 5%;
+                        left: 15px;
+                        
+                    }
+                    @include smmaxheight {
+                        margin-bottom: 15px;
+                        padding-top: 50vh;
+                        position: relative;
+
+                     }
+                }  
+            }
+            #about-us {
+                .row {
+                min-height: calc(100vh - 80px);
+                }
+            }
+
+            #our-services {
+                background-color: $light-gray;
+                .container {
+                max-width: 1200px;
+                }
+                .services-row {
+                    display: flex;
+                justify-content: center;
+                @include mdmax {
+                    display: block;
+                }
+                    .services-item {
+                    flex: 100%;
+                    max-width: 100%;
+                        @include mdmin {
+                        flex: 40%;
+                        max-width: 40%;
+                        }
+                        .item {
+                        margin: 0 1rem;
+                        background-color: $light;
+                        padding-bottom: 1rem;
+                        h3 {
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 1rem 0 0;
+                            font-size: 1.2rem;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            &:before {
+                                width: 15%;
+                                background-color: $primary;
+                                height: 3px;
+                                content: " ";
+                                display: inline-block;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                        }
+                        
+                    }
+                }
+            }
+
+            #our-departments {
+            .container {
+                max-width: 1200px;
+                }
+                #departmentCarousel {
+                    .department-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 90%;
+                        margin: auto;
+                        .department-item {
+                            @include mdmin {
+                            flex: 50%;
+                            max-width: 50%;
+                            }
+                            
+                            .item {
+                            background-color: $light-gray;
+                            padding:2rem 3rem;
+                            border: 1px solid #f4f8ff;
+                            box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+                            padding:2rem 2rem;
+                                margin: 1rem;
+                            @include mdmin {
+                                padding:2rem 3rem;
+                                margin: 2rem;
+                            }
+                            h3.item-title {
+                                font-size: 20px;
+                                font-weight: bold;
+                                margin-bottom: 1rem;
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #information {
+                padding: 0 5rem;
+                @include mdmax {
+                background-color: $green;
+                padding: 2rem;
+            }
+                .row {
+                @include mdmin {
+                    background-color: $green;
+                }
+                color: #FFF;
+                
+                
+                margin: auto;
+                font-size: 1.2rem;
+                @include mdmin {
+                    max-width: 90%;
+                    padding: 3rem;
+                }
+                svg {
+                    color: #FFF;
+                    fill: #f4f8ff;
+                    margin: 2rem 0;
+                }
+                .btn {
+                    border-radius: 0;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 1rem;
+                    &.btn-link {
+                        font-size: 1rem * 2;
+                        font-weight: 600;
+                        color: #FFF;
+                        letter-spacing: 0.2em;
+                        @include mdmax {
+                            letter-spacing: 0em;
+                        }
+
+                    }
+                }
+                }
+            }
+
+        }
+    }
+}

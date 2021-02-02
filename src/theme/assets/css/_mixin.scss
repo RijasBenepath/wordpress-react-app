@@ -1,0 +1,92 @@
+$sm: 780px;
+$md: 992px;
+$mlg: 1100px;
+$lg: 1200px;
+$mxl: 1300px;
+
+// Other Colors
+$primary:       #465d70;
+$secondary:     #f0f1f1;
+$success:       #28a745;
+$info:          #17a2b8;
+$warning:       #ffc107;
+$danger:        #dc3545;
+$light-gray:    #f4f8ff;
+$light:         #FFF;
+$green:         #005779;
+$gray:          #929497;
+
+
+@mixin bg-opacity($color, $opacity) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+@mixin smmin {
+    @media screen and (min-width: #{$sm}) {
+        @content;
+    }
+}
+
+@mixin mdmin {
+    @media screen and (min-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin mlgmin {
+    @media screen and (min-width: #{$mlg}) {
+        @content;
+    }
+}
+
+@mixin lgmin {
+    @media screen and (min-width: #{$lg}) {
+        @content;
+    }
+}
+
+@mixin mxlmin {
+    @media screen and (min-width: #{$mxl}) {
+        @content;
+    }
+}
+
+
+@mixin mxlmax {
+    @media screen and (max-width: #{$mxl}) {
+        @content;
+    }
+}
+
+@mixin lgmax {
+    @media screen and (max-width: #{$lg}) {
+        @content;
+    }
+}
+
+@mixin mlgmax {
+    @media screen and (max-width: #{$mlg}) {
+        @content;
+    }
+}
+
+@mixin mdmax {
+    @media screen and (max-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin smmax {
+    @media screen and (max-width: #{$sm}) {
+        @content;
+    }
+}
+
+//height
+
+@mixin smmaxheight {
+    @media screen and (max-height: #{$sm}) {
+        @content;
+    }
+}

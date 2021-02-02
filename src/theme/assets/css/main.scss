@@ -1,0 +1,137 @@
+@import 'mixin';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import 'header';
+@import 'footer';
+
+.bg-light {
+    background-color: $light;
+}
+* {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    color: $gray;
+    background-color: $light;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    h1, h2, h3, h4 , h5 , h6, .title {
+        color: $primary;
+    }
+    h1 {
+        margin-bottom: 3rem;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    img {
+        max-width: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    .cta {
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+    .btn {
+        font-weight: 500;
+    }
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    .divider {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        white-space: nowrap;
+        text-align: center;
+        border-top: 0;
+        border-top-color:$primary;
+        &:before, &:after {
+            position: relative;
+            top: 50%;
+            width: 25%;
+            border-top: 5px solid transparent;
+            border-top-color: inherit;
+            border-bottom: 0;
+            -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+            content: "";
+            top: 50%;
+        }
+        span {
+            display: inline-block;
+            padding: 0 1em;
+        }
+        &.left { 
+            &::before {
+                top: 50%;
+                width: 0%;
+            }
+            span {
+                display: inline-block;
+                padding: 0 1em 0 0;
+            }
+        }
+        &.center {
+            justify-content: center;
+        }
+       
+    }
+    .carousel-control-prev, .carousel-control-next {
+        @include mdmax {
+            display: none;
+        }
+    }
+    .carousel-control-prev {
+        width: 8%;
+        svg {
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+    }
+    .carousel-control-next {
+        width: 8%;
+        svg {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+  }
+  
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    .status {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: -100px 0 0 -100px;
+      }
+  }
+  
+  
+  .page {
+        main {
+         box-sizing: border-box;
+        }
+  }
+@import 'home';
